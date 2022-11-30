@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency converter</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1>Check live foreign currency exchange rates</h1>
+
+        <div class="main">
+          <div class="wrapper">
+            <div class="tabs">
+              <div class="tab active">
+                <div class="tab-icon">
+                  <img src="./images/convert.svg" alt="Convert" />
+                </div>
+                <div class="tab-title">Convert</div>
+              </div>
+
+              <div class="tab">
+                <div class="tab-icon">
+                  <img src="./images/single.svg" alt="Single" />
+                </div>
+                <div class="tab-title">Single</div>
+              </div>
+            </div>
+
+            <div class="content">
+              <form>
+                <div class="form-inputs">
+                  <div class="form-group">
+                    <label for="amount">Amount</label>
+                    <input
+                      type="number"
+                      name="amount"
+                      id="amount"
+                      placeholder="1.00"
+                    />
+                  </div>
+
+                  <div class="form-selects">
+                    <div class="form-select">
+                      <label for="from">From</label>
+                      <select class="select" name="from" id="from">
+                        <option value="" disabled selected hidden>
+                          Choose currency
+                        </option>
+                      </select>
+                    </div>
+
+                    <div class="form-select__icon switch-currencies">
+                      <img src="./images/arrows.png" alt="Arrows" />
+                    </div>
+
+                    <div class="form-select">
+                      <label for="to">To</label>
+                      <select class="select" name="to" id="to">
+                        <option value="" disabled selected hidden>
+                          Choose currency
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -45,6 +45,7 @@
                       type="number"
                       name="amount"
                       id="amount"
+                      required
                       placeholder="1.00"
                     />
                   </div>
@@ -52,7 +53,7 @@
                   <div class="form-selects">
                     <div class="form-select">
                       <label for="from">From</label>
-                      <select class="select" name="from" id="from">
+                      <select class="select" name="from" id="from" required>
                         <option value="" disabled selected hidden>
                           Choose currency
                         </option>
@@ -65,7 +66,7 @@
 
                     <div class="form-select">
                       <label for="to">To</label>
-                      <select class="select" name="to" id="to">
+                      <select class="select" name="to" id="to" required>
                         <option value="" disabled selected hidden>
                           Choose currency
                         </option>
@@ -114,8 +115,68 @@
                       <div class="form-result__item-value">2.0</div>
                     </div>
                   </div>
+
+                  <button class="submit" class="form-submit">Convert</button>
+                </div>
+
+                <div class="rate-information">
+                  <div class="rate-conversion">$1 = $34</div>
+                  <div class="rate-last">Updated 28 November 2022</div>
                 </div>
               </form>
+            </div>
+
+            <div class="content">
+              <div class="currency-wrapper">
+                <div class="currency-single">
+                  <select class="select" id="singleSelect">
+                    <option value="" disabled selected hidden>
+                      Choose currency
+                    </option>
+                  </select>
+
+                  <div class="currency-single__item">
+                    <div class="currency-item currency-current">
+                      <div class="currency-titles">
+                        <div class="currency-title">USD</div>
+                        <div class="currency-full">American dollar</div>
+                      </div>
+
+                      <div class="currency-amount">1.00</div>
+                      <div class="currency-action">
+                        <button class="cirrency-change currency-button">
+                          Change
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="currency-list">
+                  <div class="currency-item">
+                    <div class="currency-titles">
+                      <div class="currency-title">USD</div>
+                      <div class="currency-full">American dollar</div>
+                    </div>
+
+                    <div class="currency-amount">2.00</div>
+                    <div class="currency-action">
+                      <button class="cirrency-remove currency-button">
+                        Remove
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="currency-add">
+                <button class="currency-add_button">ADD currency</button>
+                <select class="select" id="addCurrencySelect">
+                  <option value="" disabled selected hidden>
+                    Choose currency
+                  </option>
+                </select>
+              </div>
             </div>
           </div>
         </div>

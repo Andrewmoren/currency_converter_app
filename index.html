@@ -21,7 +21,7 @@
         <div class="main">
           <div class="wrapper">
             <div class="tabs">
-              <div class="tab active">
+              <div class="tab active" data-tab="convert">
                 <div class="tab-icon">
                   <img src="./images/convert.svg" alt="Convert" />
                 </div>
@@ -37,7 +37,7 @@
             </div>
 
             <div class="content">
-              <form>
+              <form class="form">
                 <div class="form-inputs">
                   <div class="form-group">
                     <label for="amount">Amount</label>
@@ -82,9 +82,9 @@
                     <span></span>
                   </div>
 
-                  <div class="form-results">
+                  <div class="form-results show">
                     <div class="form-result__item from" id="resultFrom">
-                      <div class="form-result__item-icon">
+                      <div class="form-result__item-icon icon">
                         <img src="./images/arrow.svg" alt="Arrow" />
                       </div>
 
@@ -103,7 +103,7 @@
                     </div>
 
                     <div class="form-result__item to" id="resultTo">
-                      <div class="form-result__item-icon">
+                      <div class="form-result__item-icon icon">
                         <img src="./images/arrow.svg" alt="Arrow" />
                       </div>
 
@@ -116,7 +116,7 @@
                     </div>
                   </div>
 
-                  <button class="submit" class="form-submit">Convert</button>
+                  <button type="submit" class="form-submit">Convert</button>
                 </div>
 
                 <div class="rate-information">
@@ -170,7 +170,7 @@
               </div>
 
               <div class="currency-add">
-                <button class="currency-add_button">ADD currency</button>
+                <button class="currency-add__button">ADD currency</button>
                 <select class="select" id="addCurrencySelect">
                   <option value="" disabled selected hidden>
                     Choose currency

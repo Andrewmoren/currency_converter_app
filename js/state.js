@@ -7,4 +7,5 @@ export default {
     from: "",
     to: "",
   },
+  amount: "",
 };

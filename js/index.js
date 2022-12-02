@@ -17,7 +17,7 @@ const renderCodeList = () => {
   });
 };
 
-const fetchCodes = async () => {
+export const fetchCodes = async () => {
   try {
     const response = await fetch(`${state.url}/codes`);
     const data = await response.json();
@@ -30,4 +30,3 @@ const fetchCodes = async () => {
     console.log(err);
   }
 };
-fetchCodes();

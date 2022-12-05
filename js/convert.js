@@ -20,14 +20,18 @@ export const handleSubmit = async (e) => {
     pair: { from, to },
   } = state;
 
+  state.loading = true;
+
   if (!amount || !from || !to) return;
 
   try {
-    const response = await fetch(`${url}/pair/${from}/${to}`);
+    const response = await fetch(`${url}/pair/${from}/${to}/${amount}`);
     const data = await response.json();
 
+    state.loading = false;
+
     console.log(data);
-  } catch (err) {
-    console.log(err);
+  } catch (error) {
+    console.log(error);
   }
 };

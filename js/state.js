@@ -8,4 +8,5 @@ export default {
     to: "",
   },
   amount: "",
+  loading: false,
 };

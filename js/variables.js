@@ -5,4 +5,7 @@ export default {
   form: document.querySelector(".form"),
   resultForm: document.getElementById("resultFrom"),
   resultTo: document.getElementById("resultTo"),
+  formResults: document.querySelector(".form-results"),
+  rateConversion: document.querySelector(".rate-conversion"),
+  rateLast: document.querySelector(".rate-last"),
 };

@@ -1,4 +1,9 @@
+import { renderResult } from "./markups.js";
 import state from "./state.js";
+import { getFullTitle } from "./utils.js";
+import variables from "./variables.js";
+
+const { success } = variables;
 
 export const handleChange = ({ target: { value, name } }) => {
   state.pair = {
@@ -9,6 +14,29 @@ export const handleChange = ({ target: { value, name } }) => {
 
 export const handleInput = ({ target: { value, name } }) => {
   state[name] = Number(value);
+};
+
+const insertResults = ({
+  base_code: baseCode,
+  target_code: targetCode,
+  conversion_rate: rate,
+  conversion_result: result,
+  time_last_update_utc: time,
+}) => {
+  const from = {
+    code: baseCode,
+    amount: state.amount,
+    full: getFullTitle(state.codes, baseCode),
+  };
+  const to = {
+    code: targetCode,
+    amount: result,
+    full: getFullTitle(state.codes, targetCode),
+  };
+
+  resultFrom.innerHTML = renderResult(from);
+  resultTo.innerHTML = renderResult(to);
+  console.log(to);
 };
 
 export const handleSubmit = async (e) => {
@@ -27,6 +55,8 @@ export const handleSubmit = async (e) => {
   try {
     const response = await fetch(`${url}/pair/${from}/${to}/${amount}`);
     const data = await response.json();
+
+    if (data.result === success) insertResults(data);
 
     state.loading = false;
 

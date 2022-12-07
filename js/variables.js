@@ -8,4 +8,7 @@ export default {
   formResults: document.querySelector(".form-results"),
   rateConversion: document.querySelector(".rate-conversion"),
   rateLast: document.querySelector(".rate-last"),
+  switchButton: document.querySelector(".switch-currencies"),
+  toSelect: document.getElementById("to"),
+  fromSelect: document.getElementById("from"),
 };

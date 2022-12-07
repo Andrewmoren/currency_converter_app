@@ -10,3 +10,13 @@ export const formatToCurrency = (code, amout) => {
     maximumFractionDigits: 2,
   }).format(amout);
 };
+
+export const convertTime = (date) => {
+  const options = {
+    year: "numeric",
+    mounth: "long",
+    day: "numeric",
+  };
+
+  return new Intl.DateTimeFormat("en-US", options).format(new Date(date));
+};

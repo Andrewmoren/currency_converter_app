@@ -585,10 +585,10 @@ h1 {
           
 }
 
-// .content {
-//     display: none;
+.content {
+    display: none;
   
-//     &.show {
-//       display: block;
-//     }
-//   }
+    &.show {
+      display: block;
+    }
+  }

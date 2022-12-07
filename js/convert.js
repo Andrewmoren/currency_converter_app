@@ -67,8 +67,6 @@ export const handleSubmit = async (e) => {
     if (data.result === success) insertResults(data);
 
     state.loading = false;
-
-    console.log(data);
   } catch (error) {
     console.log(error);
   }

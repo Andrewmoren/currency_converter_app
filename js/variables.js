@@ -11,4 +11,5 @@ export default {
   switchButton: document.querySelector(".switch-currencies"),
   toSelect: document.getElementById("to"),
   fromSelect: document.getElementById("from"),
+  tabs: document.querySelectorAll(".tab"),
 };

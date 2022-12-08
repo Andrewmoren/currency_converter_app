@@ -3,18 +3,18 @@ export const getFullTitle = (codes, code) => {
   return title;
 };
 
-export const formatToCurrency = (code, amout) => {
+export const formatToCurrency = (code, amount) => {
   return new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: code,
     maximumFractionDigits: 2,
-  }).format(amout);
+  }).format(amount);
 };
 
 export const convertTime = (date) => {
   const options = {
     year: "numeric",
-    mounth: "long",
+    month: "long",
     day: "numeric",
   };
 

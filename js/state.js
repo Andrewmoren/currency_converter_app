@@ -10,4 +10,7 @@ export default {
   amount: "",
   loading: false,
   currentTab: "convert",
+  currency: {
+    codes: "USD",
+  },
 };

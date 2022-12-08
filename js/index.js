@@ -1,5 +1,6 @@
 import variables from "./variables.js";
 import state from "./state.js";
+
 import { handleChange } from "./convert.js";
 import { fetchLatest } from "./single.js";
 
@@ -14,7 +15,8 @@ const renderCodeList = () => {
       select.insertAdjacentElement("beforeend", element);
     });
 
-    select.addEventListener("change", handleChange);
+    const name = select.getAttribute("name");
+    name && select.addEventListener("change", handleChange);
   });
 };
 

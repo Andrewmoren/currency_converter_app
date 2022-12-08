@@ -29,6 +29,7 @@ const insertResults = ({
     amount: state.amount,
     full: getFullTitle(state.codes, baseCode),
   };
+
   const to = {
     code: targetCode,
     amount: result,
@@ -67,8 +68,8 @@ export const handleSubmit = async (e) => {
     if (data.result === success) insertResults(data);
 
     state.loading = false;
-  } catch (error) {
-    console.log(error);
+  } catch (err) {
+    console.log(err);
   }
 };
 
@@ -76,6 +77,7 @@ export const switchCurrencies = () => {
   const {
     pair: { to, from },
   } = state;
+
   if (!to || !from) return;
 
   state.pair = {
